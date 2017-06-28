@@ -16,9 +16,7 @@ class Tree:
 
 		if PATH.endswith('/'):
 			PATH=PATH[:-1]
-		
-		# if  os.path.isfile(PATH):
-		# 	return PATH
+
 
 		total = os.path.getsize(PATH)
 		list_size=[total]
@@ -34,8 +32,6 @@ class Tree:
 			except OSError:
 				print 'Permission Denied : ',PATH
 
-					#if os.path.isdir(PATH+'/'+el):
-
 		return list_size
 
 
@@ -44,9 +40,6 @@ class Tree:
 
 		if PATH.endswith('/'):
 			PATH=PATH[:-1]
-		
-		# if  os.path.isfile(PATH):
-		# 	return PATH
 
 
 		list=[]
@@ -60,13 +53,11 @@ class Tree:
 							list.extend(self.findall_files_and_directories(childpath))
 
 						if os.path.isfile(PATH+'/'+el):
-						#list.append(PATH)
 							list.append(PATH+'/'+el)
 
 			except OSError:
 				print 'Permission Denied : ',PATH
 
-					#if os.path.isdir(PATH+'/'+el):
 
 		return list
 
@@ -113,8 +104,6 @@ class Tree:
 
 	def store_single_void(self,marg_list,test_item_margin_index,final_item_margin_index,margin,list_of_margins):
 
-		#while list[test_item_margin_index] > list[final_item_margin_index]-margin+count :
-		#if  list[test_item_margin_index] > list[final_item_margin_index]-margin+1:
 		element=marg_list[test_item_margin_index]-1
 		if not (element) in list_of_margins:
 			list_of_margins.append(element)
@@ -174,8 +163,6 @@ class Tree:
 		for el in element_void :
 			help_list_to_draw[el]=[1]
 
-
-		#print help_list_to_draw
 		
 		first_to_draw_top=''
 		first_to_draw_down=''
@@ -228,7 +215,6 @@ class Tree:
 	def draw_tree(self,PATH,with_size=None):
 		list_of_directories_and_files=self.findall_files_and_directories(PATH)
 		list_of_sizes=self.findall_files_and_directories_size(PATH)
-		#se=self.store_edges(PATH)
 		m=self.calculate_margins(PATH)
 		voids=self.store_voids(PATH)
 		print PATH.split('/')[-1] if not PATH[-1]=='/' else PATH.split('/')[-2]
@@ -258,8 +244,3 @@ def parse_and_print():
 if __name__=='__main__':
 
 	parse_and_print()
-
-# 	print el.count(os.sep)
-
-
-#print len(findall(PATH))
