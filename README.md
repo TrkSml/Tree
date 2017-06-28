@@ -10,4 +10,4 @@ Save the tree.py then go to its directory and type the next command like so :
 
 The output will have the following format :
 
-![alt text]
+![alt text](https://github.com/deepsml/Tree/blob/master/tree_upload.png)
