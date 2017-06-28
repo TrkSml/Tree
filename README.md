@@ -10,4 +10,4 @@ Save the tree.py then go to its directory and type the next command like so :
 
 The output will have the following format :
 
-![alt text](https://drive.google.com/drive/folders/0B9B8jI0yTg9hakFqeVB1dVZvQjQ)
+![alt text]
