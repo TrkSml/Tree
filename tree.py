@@ -207,13 +207,13 @@ class Tree:
 		if size :
 
 			print first_to_draw_top
-			print first_to_draw_down+' : '+str(size)+' kB'
+			print first_to_draw_down+' : '+str(size)+' Bytes'
 
 		else:
 
 			print first_to_draw_top
 			print first_to_draw_down
-
+ 
 
 	def draw_tree(self,PATH,with_size=None):
 		list_of_directories_and_files=self.findall_files_and_directories(PATH)
